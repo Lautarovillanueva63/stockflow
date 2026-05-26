@@ -24,7 +24,7 @@ function App() {
   });
 
   const fetchProducts = () => {
-    axios.get("http://localhost:8080/products", {
+    axios.get("https://stockflow-4vq3.onrender.com/products", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       }
@@ -34,7 +34,7 @@ function App() {
   };
 
   const fetchCategories = () => {
-    axios.get("http://localhost:8080/categories", {
+    axios.get("https://stockflow-4vq3.onrender.com/categories", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       }
@@ -69,7 +69,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/auth/login",
+        "https://stockflow-4vq3.onrender.com/auth/login",
         loginData
       );
 
@@ -121,7 +121,7 @@ function App() {
       if (editingProductId) {
 
         await axios.put(
-          `http://localhost:8080/products/${editingProductId}`,
+          `https://stockflow-4vq3.onrender.com/products/${editingProductId}`,
           productData,
           {
             headers: {
@@ -135,7 +135,7 @@ function App() {
       } else {
 
         await axios.post(
-          "http://localhost:8080/products",
+          "https://stockflow-4vq3.onrender.com/products",
           productData,
           {
             headers: {
@@ -165,7 +165,7 @@ function App() {
     try {
 
       await axios.delete(
-        `http://localhost:8080/products/${id}`,
+        `https://stockflow-4vq3.onrender.com/products/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
