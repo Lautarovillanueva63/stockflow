@@ -58,19 +58,64 @@ El proyecto implementa:
 
 ---
 
+
+
 # 📂 Estructura
 
-```bash
+```
 Stockflow/
 │
 ├── backend/
 │
-└── frontend/
+└── frontend/ 
+```
+
+---
 
 
-⚙️ Configuración backend
+# ⚙️ Configuración backend
 
 - application.properties
 - spring.datasource.url=jdbc:postgresql://localhost:5432/stockflow
 - spring.datasource.username=postgres
 - spring.datasource.password=YOUR_PASSWORD
+
+
+
+▶️ Ejecutar Backend
+
+cd backend
+.\mvnw spring-boot:run
+
+▶️ Ejecutar Frontend
+
+cd frontend
+npm install
+npm run dev
+
+---
+
+# 📸 Screenshots
+
+## 🔐 Login
+
+![Login](screenshots/login.png)
+
+---
+
+## 📦 Dashboard principal
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## ➕ Crear producto
+
+![Crear producto](screenshots/create-product.png)
+
+---
+
+## 👤 Rol USER
+
+![Rol USER](screenshots/user-role.png)
+
